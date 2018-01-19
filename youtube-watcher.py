@@ -42,7 +42,7 @@ channels = config
 for channel, metadata in channels.items():
     if not metadata['id']:
         print('Retrieving channel ID for %s... ' % (channel), end="")
-        id = api_request(type='channels', part='id', forUsername=channel).json()['items'][0]['id']
+        id = api_request(type='channels', part='id', forUsername=channel)['items'][0]['id']
         channels[channel]['id'] = id
         print(id)
     if not metadata['last_checked']:
