@@ -23,7 +23,6 @@ After that, run the script:
     $python3 youtube-watcher.py -t 1516519200 -q
     2018-01-22T14:00:05.000Z - The Binding of Isaac: AFTERBIRTH+ - Northernlion Plays - Episode 553 [Tunnel] - https://www.youtube.com/watch?v=ydE18mRyKPk
     2018-01-21T14:00:00.000Z - The Binding of Isaac: AFTERBIRTH+ - Northernlion Plays - Episode 552 [Classy] - https://www.youtube.com/watch?v=EoXGIzuezfQ
-    $
 
 # Arguments and Flags
     -q, --quiet = Suppress informational messages (for example, the "Retrieving..." messages above)
