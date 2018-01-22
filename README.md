@@ -19,4 +19,20 @@ After that, run the script:
     {...}
     Retrieving new videos for northernlion. Last checked: 2018-01-19T20:26:06Z...
     {...}
+    
+    $python3 youtube-watcher.py -t 1516519200 -q
+    2018-01-22T14:00:05.000Z - The Binding of Isaac: AFTERBIRTH+ - Northernlion Plays - Episode 553 [Tunnel] - https://www.youtube.com/watch?v=ydE18mRyKPk
+    2018-01-21T14:00:00.000Z - The Binding of Isaac: AFTERBIRTH+ - Northernlion Plays - Episode 552 [Classy] - https://www.youtube.com/watch?v=EoXGIzuezfQ
     $
+
+# Arguments and Flags
+    -q, --quiet = Suppress informational messages (for example, the "Retrieving..." messages above)
+    -u, --url-only = Suppress video titles and publication dates, leaving only the video URL
+    -t, --time = The UNIX timestamp to use as the time when the script last checked the channels for new videos
+    
+# Examples
+You can feed the list of URLs this script returns into another program, like [youtube-dl](https://github.com/rg3/youtube-dl/).
+
+    for url in $(python3 youtube-watcher.py -qu); do 
+        /usr/local/bin/youtube-dl -f 22 $url;
+    done
