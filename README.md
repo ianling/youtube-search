@@ -61,6 +61,6 @@ After that, run the script:
 # Examples
 You can feed the list of URLs this script returns into another program, like [youtube-dl](https://github.com/rg3/youtube-dl/).
 
-    for url in $(python3 youtube-watcher.py -qu); do 
+    for url in $(python3 youtube-search.py -qu); do 
         /usr/local/bin/youtube-dl -f 22 $url;
     done
