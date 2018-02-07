@@ -31,6 +31,11 @@ Allows you to perform Youtube search queries via the command line, or set up a c
                             Specify the maximum number of videos to return per
                             channel. Max: 50
 
+# Set up
+Put your Youtube Data API key here:
+
+    APIKEY = '!!! YOUR API KEY HERE !!!'
+
 # Usage - Command Line
 The following command ignores the config file (-i), and instead searches for "northernlion live" (-s) on the channel with the username (-U) "northernlion," returning a maximum of 10 videos (-n) that were uploaded after the timestamp 1516812426 (-t).
 
