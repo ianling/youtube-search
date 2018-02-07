@@ -82,7 +82,7 @@ max_videos = options.max_videos
 # globals
 YOUTUBEBASEURL = 'https://www.youtube.com/watch?v='
 APIBASEURL= 'https://www.googleapis.com/youtube/v3'
-APIKEY = '!!!!YOUR KEY HERE!!!!'
+APIKEY = '!!! YOUR API KEY HERE !!!'
 
 if use_config:
     config_file = open(config_file_path, 'r')
@@ -99,8 +99,9 @@ if use_config:
         if time_published_arg:
             timestampToUse = time_published_arg
         else:
-            timestampToUse = current_time
+            timestampToUse = channels[channel]['last_checked']
         last_checked_pretty = format_timestamp(timestampToUse)
+        channels[channel]['last_checked'] = current_time
 
         print_if_verbose('Retrieving new videos for %s. Last checked: %s (%i)...' % (channel, last_checked_pretty, timestampToUse))
         results = api_request(request_type='search', channelId=metadata['id'], type='video', part='snippet', order='date', maxResults=max_videos, publishedAfter=last_checked_pretty)
