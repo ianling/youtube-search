@@ -6,8 +6,12 @@ from time import time
 from datetime import datetime
 from optparse import OptionParser
 
-VERSION = '1.2'
 
+# globals
+APIKEY = '!!! YOUR API KEY HERE !!!'
+YOUTUBEBASEURL = 'https://www.youtube.com/watch?v='
+APIBASEURL= 'https://www.googleapis.com/youtube/v3'
+VERSION = '1.2'
 
 # Makes a request to the Youtube Data API.
 # Returns: A dict representation of the API's JSON response.
@@ -78,11 +82,6 @@ search_by_usernames = options.search_by_usernames
 time_published_arg = options.time_published_arg
 keywords = options.keywords
 max_videos = options.max_videos
-
-# globals
-YOUTUBEBASEURL = 'https://www.youtube.com/watch?v='
-APIBASEURL= 'https://www.googleapis.com/youtube/v3'
-APIKEY = '!!! YOUR API KEY HERE !!!'
 
 if use_config:
     config_file = open(config_file_path, 'r')
